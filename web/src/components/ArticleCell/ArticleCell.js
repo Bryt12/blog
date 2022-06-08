@@ -24,8 +24,10 @@ export const Failure = ({ error }) => (
 export const Success = ({ article }) => {
   return (
     <>
-      <div className="flex justify-center pt-10">
-        <Article article={article} />
+      <div className="flex justify-center pt-10 ">
+        <div className="w-1/2">
+          <Article article={article} />
+        </div>
       </div>
     </>
   )

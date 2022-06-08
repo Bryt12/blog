@@ -31,3 +31,12 @@ model User {
   resetToken          String?
   resetTokenExpiresAt DateTime?
 }
+
+model Piece {
+  id        String   @id @default(cuid())
+  title     String
+  script    String
+  url       String
+  posted    DateTime
+  createdAt DateTime @default(now())
+}
