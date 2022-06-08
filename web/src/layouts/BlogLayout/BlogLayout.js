@@ -6,35 +6,37 @@ const BlogLayout = ({ children }) => {
 
   return (
     <>
-      <header>
-        <div className="flex-between">
-          <h1>
-            <Link to={routes.home()}>Redwood Blog</Link>
-          </h1>
-          {isAuthenticated ? (
-            <div>
-              <span>Logged in as {currentUser.email}</span>{' '}
-              <button type="button" onClick={logOut}>
-                Logout
-              </button>
-            </div>
-          ) : (
-            <Link to={routes.login()}>Login</Link>
-          )}
+      <header className="bg-slate-700">
+        <div className="flex flex-between">
+          <p className="text-5xl pl-10 py-5 text-white my-a">
+            <Link to={routes.home()}>Blog</Link>
+          </p>
+          <nav>
+            <ul className="text-white my-a">
+              <li>
+                <Link to={routes.home()}>Home</Link>
+              </li>
+              <li>
+                <Link to={routes.about()}>about</Link>
+              </li>
+              <li>
+                <Link to={routes.contact()}>Contact</Link>
+              </li>
+              <li>
+                {isAuthenticated ? (
+                  <div>
+                    <span>Logged in as {currentUser.email}</span>{' '}
+                    <button type="button" onClick={logOut}>
+                      Logout
+                    </button>
+                  </div>
+                ) : (
+                  <Link to={routes.login()}>Login</Link>
+                )}
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <Link to={routes.home()}>Home</Link>
-            </li>
-            <li>
-              <Link to={routes.about()}>about</Link>
-            </li>
-            <li>
-              <Link to={routes.contact()}>Contact</Link>
-            </li>
-          </ul>
-        </nav>
       </header>
       <main>{children}</main>
     </>

@@ -38,6 +38,7 @@ const ContactPage = () => {
 
       <Toaster />
       <Form
+        class="pl-10 border-2"
         onSubmit={onSubmit}
         config={{ mode: 'onBlur' }}
         error={error}
