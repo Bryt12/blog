@@ -7,12 +7,12 @@ const BlogLayout = ({ children }) => {
   return (
     <>
       <header className="bg-slate-700">
-        <div className="flex flex-between">
-          <p className="text-5xl pl-10 py-5 text-white my-a">
+        <div className="flex flex-row flex-between">
+          <p className="text-5xl pl-10 py-5 text-white">
             <Link to={routes.home()}>Blog</Link>
           </p>
           <nav>
-            <ul className="text-white my-a">
+            <ul className="text-white pt-5 pr-3">
               <li>
                 <Link to={routes.home()}>Home</Link>
               </li>

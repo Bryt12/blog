@@ -19,4 +19,12 @@ export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error.message}</div>
 )
 
-export const Success = ({ article }) => <Article article={article} />
+export const Success = ({ article }) => {
+  return (
+    <>
+      <div className="flex justify-center pt-10">
+        <Article article={article} />
+      </div>
+    </>
+  )
+}
