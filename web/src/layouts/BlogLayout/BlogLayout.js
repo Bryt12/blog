@@ -17,7 +17,7 @@ const BlogLayout = ({ children }) => {
                 <Link to={routes.home()}>Home</Link>
               </li>
               <li>
-                <Link to={routes.about()}>about</Link>
+                <Link to={routes.about()}>About</Link>
               </li>
               <li>
                 <Link to={routes.contact()}>Contact</Link>
